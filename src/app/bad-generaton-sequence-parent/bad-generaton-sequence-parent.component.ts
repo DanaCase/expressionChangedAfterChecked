@@ -18,10 +18,6 @@ export class BadGeneratonSequenceParentComponent implements OnInit {
     ngOnInit() {}
 
     ngAfterViewInit() {
-        //const f = this.r.resolveComponentFactory(BadGenerationSequenceChildComponent);
-        //this.modeHost.viewContainerRef.clear();
-        //this.modeHost.viewContainerRef.createComponent(f);
-        //
         const componetFactory = this.r.resolveComponentFactory(BadGenerationSequenceChildComponent);
         const viewContainerRef = this.modeHost.viewContainerRef;
         viewContainerRef.clear();

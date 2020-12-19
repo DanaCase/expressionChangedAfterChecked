@@ -39,6 +39,7 @@ import { ContrivedChildComponent } from './contrived-child/contrived-child.compo
         SharedServiceParentComponent,
         CircularEventParentComponent,
         BadGeneratonSequenceParentComponent,
+        BadGenerationSequenceChildComponent,
         ContrivedParentComponent,
     ]
 })

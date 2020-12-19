@@ -8,13 +8,21 @@
 <p><em>This almost always happens because a child component changes something on the parent component</em></p>
 <h2>Lets generate some bad components</h2>
 
-<!--So this doesnt fucking work-->
-<!--<h3>This bad component is probmematic because the child changes a value on the parent through a <em>shared service</em></h3>-->
+<h5> Contrived Component </h5>
+<p>In this contrived example, the child componet directly edits the parent property 'name' after the parent has rendered, but before the child has rendered </p>
 <app-component-generator [componentType]="'Contrived'"></app-component-generator>
+
+<h5> Shared Service Component </h5>
+<p>In this example, the parent and child component share a service.  The parent has a listener that updates a property in response to changes in the service, and the child changes the service.</p>
 
 <app-component-generator [componentType]="'SharedService'"></app-component-generator>
 
+<h5> Circular Event Component </h5>
+<p>In this example, the parent listens to the child for an event, and the child executes the event in the ngOnInit callback</p> 
+
 <app-component-generator [componentType]="'CircularEvent'"></app-component-generator>
 
+<h5>Bad Generation Sequence Example</h5>
+<p>In this example the parent component generates a child component after it should have rendered.  Because the DOM is changed outside of the normal change cycle you get an expressionChangedAfterCHecked error</p>
 <app-component-generator [componentType]="'BadGenerationSequence'"></app-component-generator>
 
