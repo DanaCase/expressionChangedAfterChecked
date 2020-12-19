@@ -7,6 +7,12 @@ import { SharedServiceChildComponent } from './shared-service-child/shared-servi
 import { ComponentGeneratorComponent } from './component-generator/component-generator.component';
 import { ComponentAnchorDirective } from './component-anchor.directive';
 import {SharedServiceService} from './shared-service.service';
+import { CircularEventParentComponent } from './circular-event-parent/circular-event-parent.component';
+import { CircularEventChildComponent } from './circular-event-child/circular-event-child.component';
+import { BadGeneratonSequenceParentComponent } from './bad-generaton-sequence-parent/bad-generaton-sequence-parent.component';
+import { BadGenerationSequenceChildComponent } from './bad-generation-sequence-child/bad-generation-sequence-child.component';
+import { ContrivedParentComponent } from './contrived-parent/contrived-parent.component';
+import { ContrivedChildComponent } from './contrived-child/contrived-child.component';
 
 @NgModule({
     declarations: [
@@ -14,7 +20,13 @@ import {SharedServiceService} from './shared-service.service';
         SharedServiceParentComponent,
         SharedServiceChildComponent,
         ComponentGeneratorComponent,
-        ComponentAnchorDirective
+        ComponentAnchorDirective,
+        CircularEventParentComponent,
+        CircularEventChildComponent,
+        BadGeneratonSequenceParentComponent,
+        BadGenerationSequenceChildComponent,
+        ContrivedParentComponent,
+        ContrivedChildComponent
     ],
     imports: [
         BrowserModule
@@ -23,6 +35,11 @@ import {SharedServiceService} from './shared-service.service';
         SharedServiceService
     ],
     bootstrap: [AppComponent],
-    entryComponents: [SharedServiceParentComponent]
+    entryComponents: [
+        SharedServiceParentComponent,
+        CircularEventParentComponent,
+        BadGeneratonSequenceParentComponent,
+        ContrivedParentComponent,
+    ]
 })
 export class AppModule { }

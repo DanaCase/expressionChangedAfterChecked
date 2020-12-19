@@ -1,6 +1,9 @@
 import { Component, OnInit, ComponentFactoryResolver, Input, ViewChild } from '@angular/core';
 import {SharedServiceParentComponent} from '../shared-service-parent/shared-service-parent.component';
 import {ComponentAnchorDirective} from '../component-anchor.directive';
+import {CircularEventParentComponent} from '../circular-event-parent/circular-event-parent.component';
+import {BadGeneratonSequenceParentComponent} from '../bad-generaton-sequence-parent/bad-generaton-sequence-parent.component';
+import {ContrivedParentComponent} from '../contrived-parent/contrived-parent.component';
 
 @Component({
     selector: 'app-component-generator',
@@ -14,6 +17,9 @@ export class ComponentGeneratorComponent implements OnInit {
     components = {}; 
     constructor(private componentFactoryResolver: ComponentFactoryResolver) {
         this.components['SharedService'] = SharedServiceParentComponent;
+        this.components['CircularEvent'] = CircularEventParentComponent;
+        this.components['BadGenerationSequence'] = BadGeneratonSequenceParentComponent;
+        this.components['Contrived'] = ContrivedParentComponent;
     }
 
     ngOnInit() {
