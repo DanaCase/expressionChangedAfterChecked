@@ -26,3 +26,7 @@
 <p>In this example the parent component generates a child component after it should have rendered.  Because the DOM is changed outside of the normal change cycle you get an expressionChangedAfterCHecked error</p>
 <app-component-generator [componentType]="'BadGenerationSequence'"></app-component-generator>
 
+<h5>Single Component</h5>
+<p> Here's an example that doesnt involve a parent/child relationship</p>
+<app-component-generator [componentType]="'SingleComponent'"></app-component-generator>
+

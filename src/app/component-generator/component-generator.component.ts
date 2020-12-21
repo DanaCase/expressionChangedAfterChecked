@@ -4,6 +4,7 @@ import {ComponentAnchorDirective} from '../component-anchor.directive';
 import {CircularEventParentComponent} from '../circular-event-parent/circular-event-parent.component';
 import {BadGeneratonSequenceParentComponent} from '../bad-generaton-sequence-parent/bad-generaton-sequence-parent.component';
 import {ContrivedParentComponent} from '../contrived-parent/contrived-parent.component';
+import {SingleComponentComponent} from '../single-component/single-component.component';
 
 @Component({
     selector: 'app-component-generator',
@@ -20,6 +21,7 @@ export class ComponentGeneratorComponent implements OnInit {
         this.components['CircularEvent'] = CircularEventParentComponent;
         this.components['BadGenerationSequence'] = BadGeneratonSequenceParentComponent;
         this.components['Contrived'] = ContrivedParentComponent;
+        this.components['SingleComponent'] = SingleComponentComponent;
     }
 
     ngOnInit() {

@@ -13,6 +13,7 @@ import { BadGeneratonSequenceParentComponent } from './bad-generaton-sequence-pa
 import { BadGenerationSequenceChildComponent } from './bad-generation-sequence-child/bad-generation-sequence-child.component';
 import { ContrivedParentComponent } from './contrived-parent/contrived-parent.component';
 import { ContrivedChildComponent } from './contrived-child/contrived-child.component';
+import { SingleComponentComponent } from './single-component/single-component.component';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { ContrivedChildComponent } from './contrived-child/contrived-child.compo
         BadGeneratonSequenceParentComponent,
         BadGenerationSequenceChildComponent,
         ContrivedParentComponent,
-        ContrivedChildComponent
+        ContrivedChildComponent,
+        SingleComponentComponent,
     ],
     imports: [
         BrowserModule
@@ -41,6 +43,7 @@ import { ContrivedChildComponent } from './contrived-child/contrived-child.compo
         BadGeneratonSequenceParentComponent,
         BadGenerationSequenceChildComponent,
         ContrivedParentComponent,
+        SingleComponentComponent,
     ]
 })
 export class AppModule { }
