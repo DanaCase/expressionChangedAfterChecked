@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { ContrivedParentComponent} from '../contrived-parent/contrived-parent.component';
 
 @Component({
@@ -16,14 +16,18 @@ export class ContrivedChildComponent implements OnInit {
     ngOnInit() {
         this.parent.text = 'updated text';
         
-        //if you commend out the above change (and the below ngAfterViewInit) this will work. Because onInit is run before the DOM is rendered.
+        ////if you commend out the above change (and the below hooks) this will work. Because onInit is run before the DOM is rendered.
         this.parent.name = "Hah I was named by my child";
     }
 
+    //changing the parent here will also caues the expressionChanged error
+    ngOnChanges() {
+        this.parent.text = "This will cause an error";
+    }
 
-    //This wont work because its running after the DOM has been updated
+    //This causes the error because its running after the DOM has been updated
     ngAfterViewInit() {
-        this.parent.name = "This wont work";
+        //this.parent.name = "This wont work";
     }
 
 }
